@@ -5,11 +5,10 @@ spring:
   application:
     name: medicare-config-server
 
-  profiles:
-    active: native
-
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config-repo, file://${user.dir}/config-repo
+        git:
+          uri: https://github.com/KienPhan1109/medicare-config-repo
+          default-label: main
+          clone-on-start: true

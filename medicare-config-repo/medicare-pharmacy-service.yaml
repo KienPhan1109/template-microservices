@@ -1,0 +1,6 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/medicare_pharmacy_db?createDatabaseIfNotExist=true&useSSL=true&allowPublicKeyRetrieval=true
