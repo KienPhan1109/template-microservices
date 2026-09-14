@@ -6,10 +6,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class MedicareConfigServerApplication {
+public class    MedicareConfigServerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MedicareConfigServerApplication.class, args);
     }
 
 }
+    
