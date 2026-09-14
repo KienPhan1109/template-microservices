@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="medicare-pharmacy-service.main" />
+        <module name="medicare-pharmacy-service.test" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="medicare-appointment-service" options="-parameters" />
+      <module name="medicare-appointment-service.main" options="-parameters" />
+      <module name="medicare-appointment-service.test" options="-parameters" />
+      <module name="medicare-doctor-service" options="-parameters" />
+      <module name="medicare-doctor-service.main" options="-parameters" />
+      <module name="medicare-doctor-service.test" options="-parameters" />
+      <module name="medicare-medical-service" options="-parameters" />
+      <module name="medicare-medical-service.main" options="-parameters" />
+      <module name="medicare-medical-service.test" options="-parameters" />
+      <module name="medicare-patient-service" options="-parameters" />
+      <module name="medicare-patient-service.main" options="-parameters" />
+      <module name="medicare-patient-service.test" options="-parameters" />
+      <module name="medicare-pharmacy-service" options="-parameters" />
+      <module name="medicare-pharmacy-service.main" options="-parameters" />
+      <module name="medicare-pharmacy-service.test" options="-parameters" />
+    </option>
+  </component>
+</project>

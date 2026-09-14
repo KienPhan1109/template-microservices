@@ -1,0 +1,26 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: medicare-appointment-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/medicare_appointment_db?createDatabaseIfNotExist=true&useSSL=true&allowPublicKeyRetrieval=true
+    username: root
+    password: Kien@1109AA.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    com.ptit.medicare_appointment_service: DEBUG
