@@ -7,8 +7,8 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="medicare-pharmacy-service.main" />
-        <module name="medicare-pharmacy-service.test" />
+        <module name="medicare-patient-service.main" />
+        <module name="medicare-patient-service.test" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +17,9 @@
       <module name="medicare-appointment-service" options="-parameters" />
       <module name="medicare-appointment-service.main" options="-parameters" />
       <module name="medicare-appointment-service.test" options="-parameters" />
+      <module name="medicare-config-server" options="-parameters" />
+      <module name="medicare-config-server.main" options="-parameters" />
+      <module name="medicare-config-server.test" options="-parameters" />
       <module name="medicare-doctor-service" options="-parameters" />
       <module name="medicare-doctor-service.main" options="-parameters" />
       <module name="medicare-doctor-service.test" options="-parameters" />
