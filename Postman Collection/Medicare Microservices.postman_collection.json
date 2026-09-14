@@ -1,0 +1,858 @@
+{
+  "info": {
+    "_postman_id": "c2416ae4-c34c-4f3d-85ab-6220d7da4859",
+    "name": "Medicare Microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48591285",
+    "_collection_link": "https://go.postman.co/collection/48591285-c2416ae4-c34c-4f3d-85ab-6220d7da4859?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Medicare Patient Service",
+      "item": [
+        {
+          "name": "GET List Patients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{patientUrl}}/patients",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Patients Is Deleted",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{patientUrl}}/patients/deleted",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients",
+                "deleted"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Patient By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{patientUrl}}/patients/1",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST Create Patient",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullName\": \"Phan Trung Kiên\",\r\n    \"dateOfBirth\": \"11/09/2006\",\r\n    \"gender\": \"MALE\",\r\n    \"phone\": \"0972678017\",\r\n    \"email\": \"trungkien1.mai93@gmail.com\",\r\n    \"address\": \"TP.HCM\",\r\n    \"insuranceId\": \"BHYT-1234567890\",\r\n    \"bloodType\": \"AB\",\r\n    \"emergencyContactName\": \"Lu Nhựt Đình\",\r\n    \"emergencyContactPhone\": \"0987654321\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{patientUrl}}/patients",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE Patient By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{patientUrl}}/patients/1",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH Restore Patient By ID",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{patientUrl}}/patients/1/restore",
+              "host": [
+                "{{patientUrl}}"
+              ],
+              "path": [
+                "patients",
+                "1",
+                "restore"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Medicare Appointment Service",
+      "item": [
+        {
+          "name": "GET List Appointments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{appointmentUrl}}/appointments",
+              "host": [
+                "{{appointmentUrl}}"
+              ],
+              "path": [
+                "appointments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Appointments Is Deleted",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{appointmentUrl}}/appointments/deleted",
+              "host": [
+                "{{appointmentUrl}}"
+              ],
+              "path": [
+                "appointments",
+                "deleted"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Medicare Medical Service",
+      "item": [
+        {
+          "name": "GET List Medicals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Medicals Is Deleted",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals/deleted",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals",
+                "deleted"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Medical By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals/1",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Medical By Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals/code/MED202609149999",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals",
+                "code",
+                "MED202609149999"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Medical By Patient ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals/patient/1",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals",
+                "patient",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET List Medical By Doctor ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{medicalUrl}}/medicals/doctor/1",
+              "host": [
+                "{{medicalUrl}}"
+              ],
+              "path": [
+                "medicals",
+                "doctor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Medicare Pharmacy Service",
+      "item": [
+        {
+          "name": "Medicine",
+          "item": [
+            {
+              "name": "GET List Medicines",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Medicine By ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines/code/MED-AML-05",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines",
+                    "code",
+                    "MED-AML-05"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Medicine By Code",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines/1",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Medicines Is Deleted",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines/deleted",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines",
+                    "deleted"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Create Medicine",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"medicineCode\": \"aegaeg\",\r\n    \"registrationNumber\": \"aegaegae\",\r\n    \"name\": \"gaegae\",\r\n    \"activeIngredient\": \"gaegaegaeg\",\r\n    \"category\": \"gaegaeg\",\r\n    \"dosageForm\": \"aegaegaeg\",\r\n    \"unit\": \"aegaegaeg\",\r\n    \"unitPrice\": 10000000,\r\n    \"stockQuantity\": 123,\r\n    \"expiryDate\": \"11/09/2021\",\r\n    \"status\": \"AVAILABLE\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH Update Stock Medicine",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"quantity\": 100,\r\n    \"type\": \"IMPORT\",\r\n    \"reason\": \"aegaegaegf\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{pharmacyUrl}}/medicines/1/stock",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "medicines",
+                    "1",
+                    "stock"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Prescription",
+          "item": [
+            {
+              "name": "GET List Prescriptions",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Prescriptions Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/deleted",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "deleted"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Prescription By ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/1",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Prescriptions By Code",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/code/RX-OVERSELL-01",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "code",
+                    "RX-OVERSELL-01"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Prescriptions By Patient ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/patient/1",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "patient",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Prescriptions By Medical ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/medical/901",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "medical",
+                    "901"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Create Prescription",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"prescriptionCode\": \"123124\",\r\n    \"medicalId\": 1,\r\n    \"patientId\": 1,\r\n    \"doctorId\": 1,\r\n    \"notes\": \"saegsrgsrh\",\r\n    \"items\": [{\r\n        \"medicineId\": 1,\r\n        \"quantity\": 10,\r\n        \"dosage\": \"13q\",\r\n        \"instruction\": \"gaegaegaeg\",\r\n        \"unitPrice\": 10\r\n    }]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Return Prescriptions For Patients",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"prescriptionCode\": \"123124\",\r\n    \"medicalId\": 1,\r\n    \"patientId\": 1,\r\n    \"doctorId\": 1,\r\n    \"notes\": \"saegsrgsrh\",\r\n    \"items\": [{\r\n        \"medicineId\": 1,\r\n        \"quantity\": 10,\r\n        \"dosage\": \"13q\",\r\n        \"instruction\": \"gaegaegaeg\",\r\n        \"unitPrice\": 10\r\n    }]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/1/dispense",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "1",
+                    "dispense"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Cancel Prescription",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"prescriptionCode\": \"123124\",\r\n    \"medicalId\": 1,\r\n    \"patientId\": 1,\r\n    \"doctorId\": 1,\r\n    \"notes\": \"saegsrgsrh\",\r\n    \"items\": [{\r\n        \"medicineId\": 1,\r\n        \"quantity\": 10,\r\n        \"dosage\": \"13q\",\r\n        \"instruction\": \"gaegaegaeg\",\r\n        \"unitPrice\": 10\r\n    }]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{pharmacyUrl}}/prescriptions/1/cancel",
+                  "host": [
+                    "{{pharmacyUrl}}"
+                  ],
+                  "path": [
+                    "prescriptions",
+                    "1",
+                    "cancel"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medicare Doctor Service",
+      "item": [
+        {
+          "name": "Doctors",
+          "item": [
+            {
+              "name": "GET List Doctors",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Doctors Is Deleted",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors/deleted",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors",
+                    "deleted"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Doctor By ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors/1",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Create Doctor",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"licenseNumber\": \"1234567890\",\r\n    \"fullName\": \"Phan Trung Kiên\",\r\n    \"dateOfBirth\": \"11/09/2006\",\r\n    \"gender\": \"MALE\",\r\n    \"phone\": \"0814780306\",\r\n    \"email\": \"phantrungkien2006@gmail.com\",\r\n    \"address\": \"TP.HCM\",\r\n    \"degree\": \"Giáo Sư\",\r\n    \"department\": \"Đa Khoa\",\r\n    \"experienceYears\": 10,\r\n    \"bio\": \"Bác sĩ tận tâm\",\r\n    \"consultationFee\": 1000000,\r\n    \"status\": \"ACTIVE\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE Doctor By ID",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors/1",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH Restore Doctor By ID",
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/doctors/1/restore",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "doctors",
+                    "1",
+                    "restore"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Departments",
+          "item": [
+            {
+              "name": "GET List Departments",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Departments Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET List Departments ACTIVE",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments/active",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments",
+                    "active"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Department By ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments/1",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Department By Code",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments/code/CARDIOLOGY",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments",
+                    "code",
+                    "CARDIOLOGY"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Create Department",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{doctorUrl}}/departments/1",
+                  "host": [
+                    "{{doctorUrl}}"
+                  ],
+                  "path": [
+                    "departments",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
